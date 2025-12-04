@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs</title>
+</head>
+
+<body>
+    <form style="background-color: aqua;">
+        <fieldset>
+            <legend>Kurs Rupiah ke Mata uang</legend>
+            <table border="1">
+                <thead>
+                    <th>Masukan Nilai</th>
+                    <th>Vales</th>
+                    <th>Nilai Rupiah</th>
+                </thead>
+                <tbody>
+                    <td><input type="number" id="uang"></td>
+                    <td>
+                        <select id="pilih">
+                            <option>Pilih</option>
+                            <option value="usd">Dolar US</option>
+                            <option value="sd">Dolar Singapore</option>
+                            <option value="rm">Ringgit Malaysia</option>
+                            <option value="yen">Yen Japan </option>
+                            <option value="eu">Euro</option>
+                            <option value="riyal">Riyal Saudi Arab</option>
+                        </select>
+                    </td>
+                    <td><input type="number" id="Konversi"></td>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+        let pilih = document.getElementById("pilih");
+
+        pilih.onchange = function () {
+            let uang = document.getElementById("uang").value;
+
+            if (pilih.value == "usd") {
+                document.getElementById("Konversi").value = uang * 9915;
+            } else if (pilih.value == "sd") {
+                document.getElementById("Konversi").value = uang * 13472;
+            } else if (pilih.value == "rm") {
+                document.getElementById("Konversi").value = uang * 874;
+
+            } else if (pilih.value == "yen") {
+                document.getElementById("Konversi").value = uang * 120;
+
+            } else if (pilih.value == "eu") {
+                document.getElementById("Konversi").value = uang * 15888;
+
+            } else if (pilih.value == "riyal") {
+                document.getElementById("Konversi").value = uang * 3592;
+            } else {
+                document.getElementById("Konversi").value = "Anda Tdak Memilih Apapun";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

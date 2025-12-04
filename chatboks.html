@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Chat Message</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <h1>Praktikum Chat Message</h1>
+    <p>Halaman percobaan</p>
+
+    <div class="content">
+        <p>Halaman untuk melihat chatbox.</p>
+        <div
+            style="height: 1500px; background: linear-gradient(#efeded, #eae3e3); border-left: 5px solid #4CAF50; padding: 20px;">
+        </div>
+    </div>
+    <div class="chatbox-container">
+        <div class="chat-header">
+            <span class="chat-title"><i class="fas fa-comments"></i> Chatbox</span>
+            <button class="minimize-btn" id="minimizeBtn"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="message received">
+                <div class="msg-content">Halo! Ada yang bisa saya bantu?</div>
+                <div class="msg-time">13:22</div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="messageInput" placeholder="Ketik pesan Anda..." autocomplete="off">
+            <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="chatboks.js"></script>
+</body>
+
+</html>
